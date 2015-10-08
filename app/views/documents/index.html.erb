@@ -1,0 +1,20 @@
+<%= link_to "Create", new_document_path %>
+
+
+<br>
+<br>
+<table border="1">
+	<tr>
+		<th width="50%"> Title </th>
+		<th> File </th>
+	</tr>
+	<% @documents.each do |document| %>
+		<tr>
+			<td style="text-align:center;"> <%= link_to document.title, document_path(document) %> </td>
+			<td> <%= document.file %> </td>
+		</tr>
+	<% end %>
+</table>
+
+<br>
+<%= link_to "Home", root_path %>

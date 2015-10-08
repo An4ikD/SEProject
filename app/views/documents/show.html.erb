@@ -1,0 +1,7 @@
+
+<p>Title:
+<%= @document.title %> </p>
+
+<%= link_to "Download file", @document.file.url(:original, false) %>
+<br>
+<%= link_to "Home", root_path %>
