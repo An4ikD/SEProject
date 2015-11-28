@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  root 'documents#index'
+  root 'static_pages#home'
+  get 'static_pages/about'
+  get 'static_pages/help'
+
+  devise_for :users
+  resources :users
+  
 
   resources :documents
 

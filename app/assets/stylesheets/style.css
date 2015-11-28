@@ -1,0 +1,34 @@
+#search-form {
+	background-color: rgb(100, 100, 100) !important;
+}
+
+.form-div {
+	display: block;
+	margin: 0 auto;
+	max-width: 550px;
+	padding: 15px;
+	background-color: #eee;
+	border-radius: 4px;
+}
+
+.table-div {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 15px;
+}
+
+.upload-div {
+	display: block;
+	margin: 0 auto;
+	max-width: 550px;
+	padding: 50px;
+	border-radius: 4px;
+	background: #eee;
+}
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
