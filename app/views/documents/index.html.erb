@@ -1,20 +1,22 @@
-<%= link_to "Create", new_document_path %>
+<h2>My documents</h2>
 
-
-<br>
-<br>
-<table border="1">
-	<tr>
-		<th width="50%"> Title </th>
-		<th> File </th>
-	</tr>
-	<% @documents.each do |document| %>
-		<tr>
-			<td style="text-align:center;"> <%= link_to document.title, document_path(document) %> </td>
-			<td> <%= document.file %> </td>
-		</tr>
-	<% end %>
-</table>
-
-<br>
-<%= link_to "Home", root_path %>
+<div class="container">
+	<div class="col-md-12">
+		<%= button_to "Upload document", new_document_path, :class => "btn btn-default", :method => "get" %> <br />
+		
+		<table class="table table-bordered">
+			<tr>
+				<th>Name</th>
+				<th>File</th>
+				<th>Owner</th>
+			</tr>
+			<% @documents.each do |document| %>
+				<tr>
+					<td><%= link_to document.title, document %></td>
+					<td><%= document.file %></td>
+					<td><%= document.user.email %></td>
+				</tr>
+			<% end %>
+		</table>
+	</div>
+</div>

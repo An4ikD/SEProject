@@ -1,13 +1,9 @@
 <%= form_for @document do |f| %>
 	<%= f.label :title %>
-	<%= f.text_field :title %>
-
-	<br>
-
+	<%= f.text_field :title %> <br />
 	<%= f.label :file %>
-  <%= f.file_field :file %>
+	<%=	f.file_field :file %>
+	<!--<%= f.select :owner_id, User.all.map{ |user| [user.email, user.id] } %>-->
   <br>
   <%= f.submit "Upload" %>
 <% end %>
-<br>
-<%= link_to "Home", root_path %>

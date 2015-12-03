@@ -1,7 +1,7 @@
 
-<p>Title:
-<%= @document.title %> </p>
-
+<h2><%= @document.title %></h2>
+<div class="container">
+Owner: <%= @document.user.email %> <br />
+<%= link_to "Delete", @document, :method => :delete %>
 <%= link_to "Download file", @document.file.url(:original, false) %>
-<br>
-<%= link_to "Home", root_path %>
+</div>
